@@ -3,6 +3,9 @@ run = "python app.py"
 entrypoint = "app.py"
 hidden = ["venv", ".config", "**/__pycache__", "**/.mypy_cache", "**/*.pyc"]
 
+run = "python -m http.server $PORT"
+
+
 [languages]
 
 [languages.python3]
@@ -80,6 +83,7 @@ POETRY_CACHE_DIR = "${REPL_HOME}/.cache/pypoetry"
 
 [gitHubImport]
 requiredFiles = [".replit", "replit.nix", ".config", "venv"]
+
 
 [deployment]
 run = ["sh", "-c", "python3 main.py"]
